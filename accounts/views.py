@@ -63,9 +63,9 @@ def login(request):
         
         if user is not None:
             auth.login(request, user)
-            # messages.success(request,'you are logged in.')
-            return redirect('home')
-        else:
+            messages.success(request,'you are logged in.')
+            return redirect('dashboard')
+        else: 
             messages.error(request, 'your email or password does not match ')
             return redirect('login')
         
@@ -97,5 +97,7 @@ def activate(request, uidb64, token):
         return redirect('register')
 
 
-# Create your views here.
- 
+@login_required(login_url= 'login')
+def dashboard(request):
+    return render(request, 'accounts/dashboard.html')
+    
