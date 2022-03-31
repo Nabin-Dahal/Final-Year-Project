@@ -89,7 +89,11 @@ def place_order(request, total=0, quantity=0,):
     for cart_item in cart_items:
         total += (cart_item.product.price * cart_item.quantity)
         quantity += cart_item.quantity
+<<<<<<< HEAD
     shipping = 0.2
+=======
+    shipping = 50
+>>>>>>> 978fff8db3d91e2cd874a6282f16c26b8298916d
     grand_total = total+shipping
         
     

@@ -37,7 +37,20 @@ class Product(models.Model):
             count = int(reviews['count'])
         return count
     
+<<<<<<< HEAD
       
+=======
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+>>>>>>> 978fff8db3d91e2cd874a6282f16c26b8298916d
     
 class VariationManager(models.Manager):
     def sizes(self):
@@ -76,6 +89,7 @@ class ReviewRating(models.Model):
     def __str__(self):
         return self.subject
     
+<<<<<<< HEAD
 class ProductGallery(models.Model):
     product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='store/products', max_length=255)
@@ -89,6 +103,8 @@ class ProductGallery(models.Model):
     
     
     
+=======
+>>>>>>> 978fff8db3d91e2cd874a6282f16c26b8298916d
     
     
     
